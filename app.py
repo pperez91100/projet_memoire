@@ -10,7 +10,7 @@ import time
 # Charger le modèle sauvegardé
 @st.cache_resource
 def load_trained_model():
-    model = load_model("ship_detection.keras")
+    model = load_model("ship_detection_model")
     return model
 
 model = load_trained_model()
