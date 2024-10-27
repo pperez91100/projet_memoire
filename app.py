@@ -15,12 +15,12 @@ else:
     st.write("GPU non détecté. L'inférence se fera sur le CPU.")
 
 # Charger le modèle sauvegardé
-@st.cache_resource
-def load_trained_model():
-    model = load_model("ship_detection_model")
-    return model
+# @st.cache_resource
+# def load_trained_model():
+#     model = load_model("ship_detection_model")
+#     return model
 
-model = load_trained_model()
+# model = load_trained_model()
 
 # Fonction de détection des navires avec optimisations
 def detect_ships(image, model, stride=40, threshold=0.90, batch_size=64, scale_percent=60):
