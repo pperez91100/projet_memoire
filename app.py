@@ -17,13 +17,13 @@ else:
 # Charger le modèle sauvegardé
 @st.cache_resource
 def load_trained_model():
-    model = load_model("ship_detection_model")
+    model = load_model("ship_detection_model.h5")
     return model
 
 model = load_trained_model()
 
 # Fonction de détection des navires avec optimisations
-def detect_ships(image, model, stride=40, threshold=0.90, batch_size=64, scale_percent=60):
+def detect_ships(image, model, stride=20, threshold=0.95, batch_size=64, scale_percent=100):
     start_time = time.time()
 
     # Redimensionner l'image pour accélérer le traitement
